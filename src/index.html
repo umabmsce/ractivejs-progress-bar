@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang='en-GB'>
+<head>
+  <meta charset='utf-8'>
+  <title>Ractive Progress Bar</title>
+  <link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+</head>
+
+<body>
+
+<script id="template" type='text/ractive'>
+  <div class="centre">
+  <h1>Progress Bar Demo</h1>
+  
+  <div class="progress-bar">
+    
+    <div id="progress1" class="progress-bar-fill" style="width: {{progress1}}%">
+      <span class="progress-label">{{progress1}}%</span>
+    </div>
+
+  </div>
+
+  <div class="progress-bar">
+    
+    <div id="progress2" class="progress-bar-fill" style="width: {{progress2}}%">
+      <span class="progress-label">{{progress2}}%</span>
+    </div>
+
+  </div>
+
+  <div class="progress-bar">
+    
+    <div id="progress3" class="progress-bar-fill" style="width: {{progress3}}%">
+      <span class="progress-label">{{progress3}}%</span>
+    </div>
+
+  </div>
+  <select value='{{selectedProgress}}'>
+    <option value='1'>#progress1</option>
+    <option value='2'>#progress2</option>
+    <option value='3'>#progress3</option>
+  </select>
+  <button on-click='minus25'>-25</button>
+  <button on-click='minus10'>-10</button>
+  <button on-click='plus10'>+10</button>  
+  <button on-click='plus25'>+25</button>  
+  </script>
+</div>
+  <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+  <script src='scripts/progress-bar.js'></script>
+</body>
+</html>
